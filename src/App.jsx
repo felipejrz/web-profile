@@ -1,35 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// App.jsx
+import React, { useState } from 'react';
+import ProfileNavBar from "./components/ProfileNavBar";
+import { Typography, CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [themeMode, setThemeMode] = useState('light');
+
+  const getTheme = () => {
+    switch (themeMode) {
+      case 'dark':
+        return createTheme({ palette: { mode: 'dark' } });
+      case 'system':
+        return createTheme(); // System theme is applied by default
+      default:
+        return createTheme({ palette: { mode: 'light' } });
+    }
+  };
+
+  const toggleTheme = (mode) => {
+    setThemeMode(mode);
+  };
+
+  const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <ThemeProvider theme={getTheme()}>
+      <CssBaseline />
+      <ProfileNavBar scrollToSection={scrollToSection} toggleTheme={toggleTheme} />
+      <div style={{ height: '64px' }} /> {/* Spacer to prevent content from hiding behind AppBar */}
 
-export default App
+      <div id="section1" style={{ height: '100vh', padding: '20px' }}>
+        <Typography variant="h2">Sobre Mi</Typography>
+        <Typography variant="body1">Contenido sobre mí...</Typography>
+      </div>
+      <div id="section2" style={{ height: '100vh', padding: '20px' }}>
+        <Typography variant="h2">Experiencia</Typography>
+        <Typography variant="body1">Contenido sobre experiencia...</Typography>
+      </div>
+      <div id="section3" style={{ height: '100vh', padding: '20px' }}>
+        <Typography variant="h2">Proyectos</Typography>
+        <Typography variant="body1">Contenido sobre proyectos...</Typography>
+      </div>
+      <div id="section4" style={{ height: '100vh', padding: '20px' }}>
+        <Typography variant="h2">Contacto</Typography>
+        <Typography variant="body1">Contenido de contacto...</Typography>
+      </div>
+    </ThemeProvider>
+  );
+};
+
+export default App;
