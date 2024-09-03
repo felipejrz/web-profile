@@ -21,7 +21,7 @@ function App() {
       {/* Tus secciones */}
 
       <div id="section1" style={{padding: "80px 20px 20px 20px" }}>
-        <Typography variant="h2">Sobre Mi</Typography>
+        <Typography variant="h2" color="secondary">Sobre Mi</Typography>
         <Typography variant="body1">Contenido sobre mí...</Typography>
       </div>
       <div id="section2" style={{ height: "100vh", padding: "80px 20px 20px 20px" }}>

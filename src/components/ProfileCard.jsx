@@ -50,12 +50,12 @@ function ProfileNavBar({ scrollToSection }) {
   const getCurrentIcon = () => {
     switch (themeMode) {
       case "light":
-        return <LightModeIcon fontSize="inherit" />;
+        return <LightModeIcon />;
       case "dark":
-        return <NightlightIcon fontSize="inherit" />;
+        return <NightlightIcon />;
       case "system":
       default:
-        return <SettingsBrightnessIcon fontSize="inherit" />;
+        return <SettingsBrightnessIcon />;
     }
   };
 
@@ -113,7 +113,7 @@ function ProfileNavBar({ scrollToSection }) {
           borderRadius: "50px",
           transition:
             "background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
-          width: { xs: "85%", sm: "75%", md: "40%", lg: "35%", xl: "30%" },
+          width: { xs: "90%", sm: "80%", md: "70%", lg: "30%" }, // Responsividad
           maxWidth: "100%",
         }}
       >
@@ -139,7 +139,7 @@ function ProfileNavBar({ scrollToSection }) {
                 whileHover="hover"
                 variants={buttonVariants}
                 style={{
-                  padding: "4px 4px",
+                  padding: "4px 8px",
                 }}
                 onMouseEnter={() => setHoveredItem(item.id)}
                 onMouseLeave={() => setHoveredItem("")}
@@ -149,7 +149,6 @@ function ProfileNavBar({ scrollToSection }) {
                   onClick={() => scrollToSection(item.id)}
                   sx={{
                     cursor: "pointer",
-                    fontSize: { xs: "0.6rem", sm: "1.1rem", md: "0.8rem", lg: "0.9rem", xl:"1rem"}, // Tamaño de la fuente responsivo
                     color:
                       activeSection === item.id || hoveredItem === item.id
                         ? theme.palette.primary.main
@@ -166,10 +165,7 @@ function ProfileNavBar({ scrollToSection }) {
             <motion.div whileHover="hover" variants={buttonVariants}>
               <IconButton
                 onClick={handleMenuClick}
-                sx={{
-                  color: theme.palette.text.primary,
-                  fontSize: { xs: "1.1rem", sm: "1.5rem", md: "1.5rem" }, // Tamaño del ícono responsivo
-                }}
+                sx={{ color: theme.palette.text.primary }}
               >
                 {getCurrentIcon()}
               </IconButton>

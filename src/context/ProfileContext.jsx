@@ -1,30 +1,24 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import { getThemeOptions } from '../theme/themeOptions';
 
-//* Crear el contexto
 export const ProfileContext = createContext();
 
-//* Proveedor del contexto
 export function ProfileContextProvider({ children }) {
-  //* Estado para manejar el modo de tema: 'light', 'dark', 'system'
   const [themeMode, setThemeMode] = useState('system');
 
-  //* Función para determinar el tema efectivo
+  // Función para determinar el tema efectivo
   const getEffectiveTheme = (mode) => {
     if (mode === 'system') {
-      // Detectar preferencia de color del sistema
+      //* Detectar preferencia de color del sistema
       return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
     return mode;
   };
 
-  //* Crear el tema de MUI basado en el modo actual
-  const theme = createTheme({
-    palette: {
-      mode: getEffectiveTheme(themeMode),
-    },
-  });
+  // Crear el tema de MUI basado en el modo actual
+  const theme = createTheme(getThemeOptions(getEffectiveTheme(themeMode)));
 
   // Función para cambiar el tema
   const toggleTheme = (mode) => {
@@ -48,7 +42,7 @@ export function ProfileContextProvider({ children }) {
   return (
     <ProfileContext.Provider value={{ themeMode, toggleTheme }}>
       <ThemeProvider theme={theme}>
-        <CssBaseline /> {/* Aplicar estilos globales de MUI */}
+        <CssBaseline />
         {children}
       </ThemeProvider>
     </ProfileContext.Provider>
