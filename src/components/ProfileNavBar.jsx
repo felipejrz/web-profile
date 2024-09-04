@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import {
   AppBar,
   Toolbar,
@@ -105,15 +105,13 @@ function ProfileNavBar({ scrollToSection }) {
         elevation={isScrolled ? 4 : 0}
         sx={{
           marginTop: "10px",
-          backgroundColor: isScrolled
-            ? (themeMode === "dark" ? "transparent" : "transparent")
-            : "transparent",
+          backgroundColor: "transparent",
           backdropFilter: isScrolled ? "blur(8px)" : "none",
           color: theme.palette.text.primary,
           borderRadius: "50px",
           transition:
             "background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
-          width: { xs: "85%", sm: "75%", md: "40%", lg: "35%", xl: "30%" },
+          width: { xs: "85%", sm: "65%", md: "40%", lg: "32%", xl: "30%" },
           maxWidth: "100%",
         }}
       >
@@ -149,7 +147,7 @@ function ProfileNavBar({ scrollToSection }) {
                   onClick={() => scrollToSection(item.id)}
                   sx={{
                     cursor: "pointer",
-                    fontSize: { xs: "0.6rem", sm: "1.1rem", md: "0.8rem", lg: "0.9rem", xl:"1rem"}, // Tamaño de la fuente responsivo
+                    fontSize: { xs: "0.65rem", sm: ".9rem", md: "0.8rem", lg: "0.85rem", xl:"1rem"},
                     color:
                       activeSection === item.id || hoveredItem === item.id
                         ? theme.palette.primary.main
@@ -168,7 +166,7 @@ function ProfileNavBar({ scrollToSection }) {
                 onClick={handleMenuClick}
                 sx={{
                   color: theme.palette.text.primary,
-                  fontSize: { xs: "1.1rem", sm: "1.5rem", md: "1.5rem" }, // Tamaño del ícono responsivo
+                  fontSize: { xs: "1.1rem", sm: "1.5rem", md: "1.5rem" }, 
                 }}
               >
                 {getCurrentIcon()}

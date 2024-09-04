@@ -21,6 +21,33 @@ const lightThemeOptions = {
       default: "#e0f2fa",
     },
   },
+  typography: {
+    fontFamily: 'AR One Sans, Arial, sans-serif', // Fuente para el cuerpo de texto
+    h1: {
+      fontFamily: 'Outward Block, Arial, sans-serif', // Fuente personalizada para h1
+      fontSize: '12rem',
+    },
+    h2: {
+      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontSize: '10rem',
+    },
+    h3: {
+      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontSize: '8rem',
+    },
+    h4: {
+      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontSize: '6rem',
+    },
+    h5: {
+      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontSize: '4rem',
+    },
+    h6: {
+      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontSize: '3rem',
+    },
+  },
 };
 
 // Configuración de tema oscuro
@@ -44,6 +71,33 @@ const darkThemeOptions = {
     },
     background: {
       default: "#05171f",
+    },
+  },
+  typography: {
+    fontFamily: 'AR One Sans, Arial, sans-serif', // Fuente para el cuerpo de texto
+    h1: {
+      fontFamily: 'Outward Block, Arial, sans-serif', // Fuente personalizada para h1
+      fontSize: '12rem',
+    },
+    h2: {
+      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontSize: '10rem',
+    },
+    h3: {
+      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontSize: '8rem',
+    },
+    h4: {
+      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontSize: '6rem',
+    },
+    h5: {
+      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontSize: '4rem',
+    },
+    h6: {
+      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontSize: '3rem',
     },
   },
 };
