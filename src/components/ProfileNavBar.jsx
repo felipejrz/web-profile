@@ -147,7 +147,7 @@ function ProfileNavBar({ scrollToSection }) {
                   onClick={() => scrollToSection(item.id)}
                   sx={{
                     cursor: "pointer",
-                    fontSize: { xs: "0.65rem", sm: ".9rem", md: "0.8rem", lg: "0.85rem", xl:"1rem"},
+                    fontSize: { xs: "0.65rem", sm: ".9rem", md: "0.8rem", lg: "0.8rem", xl:"1rem"},
                     color:
                       activeSection === item.id || hoveredItem === item.id
                         ? theme.palette.primary.main
