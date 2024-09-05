@@ -10,35 +10,32 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 
-// Estilos personalizados utilizando el tema
 const StyledPaper = styled(Paper)(({ theme }) => ({
   padding: "6px 16px",
   boxShadow: 3,
   overflow: "hidden",
   position: "relative",
   transition: "transform 0.3s ease-in-out",
-  backgroundColor: theme.palette.background.default, // Fondo según el tema
+  backgroundColor: theme.palette.background.default,
   "&:hover": {
-    transform: "scale(1.02)", // Zoom más sutil en la tarjeta
+    transform: "scale(1.02)",
   },
   "&:hover .zoom-image": {
-    transform: "scale(1.05)", // Zoom sincronizado para la imagen
+    transform: "scale(1.05)",
   },
 }));
 
 const StyledTimelineConnector = styled(TimelineConnector)(({ theme }) => ({
-  backgroundColor: theme.palette.secondary.main, // Color del conector según el tema
+  backgroundColor: theme.palette.secondary.main,
 }));
 
 function ProfileWorks({ puesto, empresa, localizacion, fechas, texto }) {
-  const theme = useTheme(); // Accede al tema actual
+  const theme = useTheme();
 
   return (
-    <TimelineItem
-      sx={{ backgroundColor: theme.palette.background.default}}
-    >
+    <TimelineItem sx={{ backgroundColor: theme.palette.background.default }}>
       <TimelineOppositeContent>
-        <Typography variant="h5" color = "primary">
+        <Typography variant="h5" color="primary">
           {fechas}
         </Typography>
       </TimelineOppositeContent>
@@ -59,7 +56,7 @@ function ProfileWorks({ puesto, empresa, localizacion, fechas, texto }) {
           <Typography
             variant="body2"
             sx={{
-              color: theme.palette.text.secondary, // Color de texto secundario según el tema
+              color: theme.palette.text.secondary,
               mb: 2,
             }}
           >
