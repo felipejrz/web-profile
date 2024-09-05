@@ -23,7 +23,7 @@ function App() {
       <div
         id="section1"
         data-scroll-section
-        style={{ height: "120vh", padding: "80px 20px 20px 20px" }}
+        style={{ height: "120vh", padding: "80px 20px 00px 20px" }}
       >
         <Typography  data-scroll data-scroll-speed="1" variant="h2">Sobre Mi</Typography>
         <Typography  data-scroll data-scroll-speed="2" color="primary">Contenido sobre mí...</Typography>
@@ -31,9 +31,9 @@ function App() {
       <div
         id="section2"
         data-scroll-section
-        style={{ height: "100vh", padding: "0px 20px 20px 20px" }}
+        style={{ height: "100vh", padding: "0px 20px 0px 20px" }}
       >
-        <Typography  data-scroll data-scroll-speed="1" variant="h2">Experiencia</Typography>
+        <Typography  data-scroll data-scroll-speed="1" variant="h2" >Experiencia</Typography>
       </div>
       <div
         id="section3"

@@ -4,7 +4,7 @@ import {profileData} from '../data/dataProjects'
 
 function ProfileListCard() {
   return (
-    <Grid container spacing={2}>
+    <Grid container>
       {profileData.map((profile, index) => (
         <Grid item xs={12} sm={6} md={6} key={index}>
           <ProfileCard
