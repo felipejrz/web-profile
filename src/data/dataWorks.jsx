@@ -11,7 +11,7 @@ export const worksData = [
   },
   {
     puesto: "Desarrollador Web",
-    empresa: "ASOCIACIÓN DE JUBILADOS DE BANCOMEXT",
+    empresa: "Asociación de Jubilados de BancoMext",
     localizacion: "Ciudad de México",
     fechas: "Diciembre 2022 – Junio 2023",
     texto:
@@ -24,5 +24,13 @@ export const worksData = [
     fechas: "Julio 2023 – Marzo 2024",
     texto:
       "Apliqué de manera efectiva el modelo de cascada en la gestión del proyecto, utilizando herramientas como HTML, CSS, JavaScript, Django, Bootstrap, GitHub y PostgreSQL para el desarrollo y la gestión. Como desarrollador frontend en el proyecto de creación de la página web para la UAM, me enfoqué en la implementación exitosa de una interfaz centrada en el registro de tutorías y asesorías. A través de estrategias de liderazgo efectivas, logré garantizar la entrega puntual del proyecto con altos estándares de calidad.",
+  },
+  {
+    puesto: "Desarrollador Web",
+    empresa: "Freelance",
+    localizacion: "Ciudad de México",
+    fechas: "Actualmente...",
+    texto:
+      "Apasionado por la creación de herramientas tecnológicas avanzadas 🤖, he desarrollado generadores de historias automáticas 📚 utilizando cadenas de Markov, optimizando algoritmos para creatividad y eficiencia 🚀. También gestioné con éxito proyectos de desarrollo web 🌐 utilizando modelos de gestión como cascada, garantizando entregas puntuales y de alta calidad 🎯. En mi trabajo frontend y backend, he implementado interfaces intuitivas y soluciones robustas 💻, siempre asegurando coherencia en el código y satisfacción del cliente 🙌. Mi enfoque es entregar innovación y resultados que impulsen el éxito de cada proyecto 🌟.",
   },
 ];

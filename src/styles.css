@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: 'Outward Block';
-  src: url('./fonts/outward-block.ttf') format('truetype');
+  src: url('./fonts/Finesse-Roman.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Outward Borders';
-  src: url('./fonts/outward-borders.ttf') format('truetype');
+  src: url('./fonts/Westgate-Regular.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

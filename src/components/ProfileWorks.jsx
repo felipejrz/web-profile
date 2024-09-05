@@ -35,10 +35,10 @@ function ProfileWorks({ puesto, empresa, localizacion, fechas, texto }) {
 
   return (
     <TimelineItem
-      sx={{ backgroundColor: theme.palette.background.default, p: 3 }}
+      sx={{ backgroundColor: theme.palette.background.default}}
     >
       <TimelineOppositeContent>
-        <Typography variant="h5">
+        <Typography variant="h5" color = "primary">
           {fechas}
         </Typography>
       </TimelineOppositeContent>
@@ -50,10 +50,10 @@ function ProfileWorks({ puesto, empresa, localizacion, fechas, texto }) {
       </TimelineSeparator>
       <TimelineContent>
         <StyledPaper>
-          <Typography variant="h5" component="h5" >
+          <Typography variant="h4" component="h4" color="primary">
             {puesto} - {empresa}
           </Typography>
-          <Typography variant="h6" component="h6">
+          <Typography variant="h5" component="h5" color="secondary">
             {localizacion}
           </Typography>
           <Typography
