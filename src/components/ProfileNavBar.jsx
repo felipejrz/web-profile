@@ -10,10 +10,8 @@ import {
   IconButton,
 } from "@mui/material";
 import { motion } from "framer-motion";
-import NightlightIcon from "@mui/icons-material/Nightlight";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import SettingsBrightnessIcon from "@mui/icons-material/SettingsBrightness";
 import { ProfileContext } from "../context/ProfileContext";
+import * as Icons from '../data/dataIcons'
 
 function ProfileNavBar({ scrollToSection }) {
   const theme = useTheme();
@@ -50,12 +48,12 @@ function ProfileNavBar({ scrollToSection }) {
   const getCurrentIcon = () => {
     switch (themeMode) {
       case "light":
-        return <LightModeIcon fontSize="inherit" />;
+        return <Icons.MdLightMode fontSize="inherit" />;
       case "dark":
-        return <NightlightIcon fontSize="inherit" />;
+        return <Icons.MdDarkMode fontSize="inherit" />;
       case "system":
       default:
-        return <SettingsBrightnessIcon fontSize="inherit" />;
+        return <Icons.MdOutlineSettingsBrightness fontSize="inherit" />;
     }
   };
 
@@ -166,7 +164,7 @@ function ProfileNavBar({ scrollToSection }) {
                 onClick={handleMenuClick}
                 sx={{
                   color: theme.palette.text.primary,
-                  fontSize: { xs: "1.1rem", sm: "1.5rem", md: "1.5rem" }, 
+                  fontSize: { xs: "1.1rem", sm: "1.5rem", md: "1.2rem" }, 
                 }}
               >
                 {getCurrentIcon()}
@@ -181,15 +179,15 @@ function ProfileNavBar({ scrollToSection }) {
           onClose={handleMenuClose}
         >
           <MenuItem onClick={() => handleThemeChange("light")}>
-            <LightModeIcon fontSize="small" />
+            <Icons.MdLightMode fontSize="small" />
             &nbsp;Light
           </MenuItem>
           <MenuItem onClick={() => handleThemeChange("dark")}>
-            <NightlightIcon fontSize="small" />
+            <Icons.MdDarkMode fontSize="small" />
             &nbsp;Dark
           </MenuItem>
           <MenuItem onClick={() => handleThemeChange("system")}>
-            <SettingsBrightnessIcon fontSize="small" />
+            <Icons.MdOutlineSettingsBrightness fontSize="small" />
             &nbsp;System
           </MenuItem>
         </Menu>

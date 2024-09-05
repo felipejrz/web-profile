@@ -1,18 +1,20 @@
-import React, { createContext, useState, useEffect } from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import { getThemeOptions } from '../theme/themeOptions';
+import React, { createContext, useState, useEffect } from "react";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { getThemeOptions } from "../theme/themeOptions";
 
 export const ProfileContext = createContext();
 
 export function ProfileContextProvider({ children }) {
-  const [themeMode, setThemeMode] = useState('system');
+  const [themeMode, setThemeMode] = useState("system");
 
   // Función para determinar el tema efectivo
   const getEffectiveTheme = (mode) => {
-    if (mode === 'system') {
+    if (mode === "system") {
       //* Detectar preferencia de color del sistema
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
     }
     return mode;
   };
@@ -27,14 +29,14 @@ export function ProfileContextProvider({ children }) {
 
   // Efecto para escuchar cambios en la preferencia de color del sistema
   useEffect(() => {
-    if (themeMode === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    if (themeMode === "system") {
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
       const handleChange = (e) => {
-        setThemeMode(e.matches ? 'dark' : 'light');
+        setThemeMode(e.matches ? "dark" : "light");
       };
-      mediaQuery.addEventListener('change', handleChange);
+      mediaQuery.addEventListener("change", handleChange);
       return () => {
-        mediaQuery.removeEventListener('change', handleChange);
+        mediaQuery.removeEventListener("change", handleChange);
       };
     }
   }, [themeMode]);
