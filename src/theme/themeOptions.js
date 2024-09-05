@@ -22,7 +22,7 @@ const lightThemeOptions = {
     },
   },
   typography: {
-    fontFamily: 'AR One Sans, Arial, sans-serif', // Fuente para el cuerpo de texto
+    fontFamily: 'JetBrains Mono, Arial, sans-serif', // Fuente para el cuerpo de texto
     h1: {
       fontFamily: 'Outward Block, Arial, sans-serif', // Fuente personalizada para h1
     },
@@ -68,7 +68,7 @@ const darkThemeOptions = {
     },
   },
   typography: {
-    fontFamily: 'AR One Sans, Arial, sans-serif', // Fuente para el cuerpo de texto
+    fontFamily: 'JetBrains Mono, Arial, sans-serif', // Fuente para el cuerpo de texto
     h1: {
       fontFamily: 'Outward Block, Arial, sans-serif', // Fuente personalizada para h1
     },
