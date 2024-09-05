@@ -47,7 +47,14 @@ function ProfileWorks({ puesto, empresa, localizacion, fechas, texto }) {
       </TimelineSeparator>
       <TimelineContent>
         <StyledPaper>
-          <Typography variant="h4" component="h4" color="primary">
+          <Typography
+            variant="h4"
+            component="h4"
+            color="primary"
+            sx={{
+              mt: 2,
+            }}
+          >
             {puesto} - {empresa}
           </Typography>
           <Typography variant="h5" component="h5" color="secondary">

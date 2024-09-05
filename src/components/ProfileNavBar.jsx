@@ -58,7 +58,7 @@ function ProfileNavBar({ scrollToSection }) {
   };
 
   const navItems = [
-    { id: "section1", label: "Sobre Mi" },
+    { id: "section1", label: "Home" },
     { id: "section2", label: "Experiencia" },
     { id: "section3", label: "Proyectos" },
     { id: "section4", label: "Contacto" },
