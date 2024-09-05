@@ -56,7 +56,7 @@ function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
         <Typography
           variant="body2"
           sx={{
-            color: theme.palette.text.secondary, // Color de texto secundario según el tema
+            color: theme.palette.text.secondary,
           }}
         >
           {texto}

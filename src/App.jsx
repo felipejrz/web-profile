@@ -3,6 +3,7 @@ import React from "react";
 import ProfileNavBar from "./components/ProfileNavBar";
 import { Typography } from "@mui/material";
 import ProfileListCard from './components/ProfileListCard'
+import ProfileTimeLine from './components/ProfileTimeLine'
 
 //* Función para desplazarse a una sección específica
 function App() {
@@ -31,9 +32,10 @@ function App() {
       <div
         id="section2"
         data-scroll-section
-        style={{ height: "100vh", padding: "0px 20px 0px 20px" }}
+        style={{padding: "0px 20px 0px 20px" }}
       >
-        <Typography  data-scroll data-scroll-speed="1" variant="h2" >Experiencia</Typography>
+        <Typography  data-scroll data-scroll-speed="1" variant="h2" >Experiencia Laboral</Typography>
+        <ProfileTimeLine/>
       </div>
       <div
         id="section3"

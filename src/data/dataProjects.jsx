@@ -32,6 +32,5 @@ export const profileData = [
     linkPages: "https://felipejrz.github.io/pokemon-zeiropedia/",
     linkHub: "https://github.com/felipejrz/web-profile",
   },
-
-  // Agrega más objetos para más tarjetas
+  
 ];
