@@ -25,7 +25,7 @@ function App() {
       <div
         id="section1"
         data-scroll-section
-        style={{ height: "100vh", padding: "80px 20px 00px 20px" }}
+        style={{padding: "80px 20px 00px 20px" }}
       >
         <ProfileHome/>
       </div>
