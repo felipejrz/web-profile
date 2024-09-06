@@ -10,7 +10,6 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 
-// Estilo para el Paper que contiene el contenido del Timeline
 const StyledPaper = styled(Paper)(({ theme }) => ({
   padding: "12px",
   boxShadow: 3,
@@ -66,8 +65,10 @@ function ProfileWorks({ puesto, empresa, localizacion, fechas, texto }) {
             color="primary"
             sx={{
               mb: 1,
-              [theme.breakpoints.down("sm")]: {
-                fontSize: "1.0rem",
+              fontSize: {
+                xs: "1.2rem",
+                sm: "1.4rem",
+                md: "1.6rem",
               },
             }}
           >
@@ -78,9 +79,10 @@ function ProfileWorks({ puesto, empresa, localizacion, fechas, texto }) {
             component="h6"
             color="primary"
             sx={{
-              display: { xs: "block", md: "none" },
-              [theme.breakpoints.down("sm")]: {
-                fontSize: "1.0rem",
+              fontSize: {
+                xs: "1.2rem",
+                sm: "1.4rem",
+                md: "1.6rem",
               },
             }}
           >
@@ -91,8 +93,10 @@ function ProfileWorks({ puesto, empresa, localizacion, fechas, texto }) {
             component="p"
             color="secondary"
             sx={{
-              [theme.breakpoints.down("sm")]: {
-                fontSize: ".8rem",
+              fontSize: {
+                xs: "0.8rem",
+                sm: "0.8rem",
+                md: "1rem",
               },
             }}
           >
@@ -103,8 +107,10 @@ function ProfileWorks({ puesto, empresa, localizacion, fechas, texto }) {
             sx={{
               color: theme.palette.text.secondary,
               mt: 1,
-              [theme.breakpoints.down("sm")]: {
-                fontSize: "0.6rem", // Ajuste del tamaño de fuente en pantallas pequeñas
+              fontSize: {
+                xs: "0.7rem",
+                sm: "0.7rem",
+                md: "0.9rem",
               },
             }}
           >

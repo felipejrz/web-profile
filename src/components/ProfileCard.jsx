@@ -7,11 +7,11 @@ import {
   Typography,
   Stack,
   Chip,
+  Box,
 } from "@mui/material";
-import { useTheme } from "@mui/material/styles"; // Para usar los colores del tema
+import { useTheme } from "@mui/material/styles";
+import { FaLink, FaGithub } from "react-icons/fa";
 
-import * as Icons from '../data/dataIcons'
-import { FaLink, FaGithub } from "react-icons/fa"; //!Importar la libreria de iconos
 function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
   const theme = useTheme(); // Accede al tema actual (claro u oscuro)
 
@@ -22,34 +22,51 @@ function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
           xs: 1,
           md: 2,
         },
-        boxShadow: 3,
+        boxShadow: 4,
         overflow: "hidden",
         position: "relative",
         transition: "transform 0.3s ease-in-out",
-        backgroundColor: theme.palette.background.default, // Fondo según el tema
+        backgroundColor: theme.palette.background.default,
+        borderRadius: "16px",
         "&:hover": {
-          transform: "scale(1.02)", // Zoom más sutil en la tarjeta
+          transform: "scale(1.02)", // Zoom Card
         },
         "&:hover .zoom-image": {
-          transform: "scale(1.05)", // Zoom sincronizado para la imagen
+          transform: "scale(1.08)", // Zoom imagen
         },
       }}
     >
-      <CardMedia
-        component="img"
+      <Box
         sx={{
-          height: 200,
-          transition: "transform 0.3s ease-in-out",
+          overflow: "hidden",
+          display: "flex",
+          justifyContent: "center",
         }}
-        className="zoom-image"
-        image={imagen}
-        title={titulo}
-      />
+      >
+        <CardMedia
+          component="img"
+          sx={{
+            height: { xs: 200, md: 230, lg: 250 },
+            width: "100%",
+            transition: "transform 0.3s ease-in-out",
+            objectFit: "cover",
+          }}
+          image={imagen}
+          title={titulo}
+          alt={`${titulo} preview`}
+          className="zoom-image"
+        />
+      </Box>
       <CardContent>
         <Typography
           variant="h5"
           sx={{
-            color: theme.palette.primary.main, // Color primario según el tema
+            color: theme.palette.primary.main,
+            fontSize: {
+              xs: "1.2rem",
+              sm: "1.4rem",
+              md: "1.6rem",
+            },
           }}
         >
           {titulo}
@@ -58,15 +75,27 @@ function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
           variant="body2"
           sx={{
             color: theme.palette.text.secondary,
+            mt: 1,
+            fontSize: {
+              xs: "0.7rem",
+              sm: "0.7rem",
+              md: "0.9rem",
+            },
           }}
         >
           {texto}
         </Typography>
+
+        {/* Chips Section */}
         <Stack
           direction="row"
           sx={{
             flexWrap: "wrap",
-            gap: 1,
+            gap: {
+              xs: 0.5, // Espaciado entre chips en pantallas pequeñas
+              sm: 0.75, // Espaciado entre chips en pantallas medianas
+              md: 1, // Espaciado entre chips en pantallas grandes
+            },
             mt: 2,
           }}
         >
@@ -75,30 +104,45 @@ function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
               key={index}
               icon={chip.icon}
               label={chip.label}
-              variant={theme.palette.mode === 'dark' ? 'outlined' : 'filled'} // Cambiar entre outlined y filled según el tema
+              variant={theme.palette.mode === "dark" ? "outlined" : "filled"}
               sx={{
-                backgroundColor: theme.palette.mode === 'light'
-                  ? chip.color || theme.palette.background.paper // Fondo según el prop en tema claro
-                  : 'transparent', // Fondo transparente en tema oscuro
-                borderColor: chip.color || theme.palette.primary.main, // Color de borde según el tema
-                color: theme.palette.mode === 'light'
-                  ? theme.palette.text.primary // Texto en negro en tema claro
-                  : chip.color || theme.palette.primary.contrastText, // Color de texto del chip en tema oscuro
+                backgroundColor:
+                  theme.palette.mode === "light" ? chip.color : "transparent",
+                borderColor: chip.color,
+                color:
+                  theme.palette.mode === "light"
+                    ? theme.palette.text.primary
+                    : chip.color,
                 "& .MuiChip-icon": {
-                  color: theme.palette.mode === 'light'
-                    ? theme.palette.text.primary // Color del icono en negro en tema claro
-                    : chip.color || theme.palette.primary.contrastText, // Color del icono en tema oscuro
+                  color:
+                    theme.palette.mode === "light"
+                      ? theme.palette.text.primary
+                      : chip.color,
                 },
-                padding: {
-                  xs: "2px 4px",
-                  sm: "4px 8px",
-                  md: "6px 12px",
+                fontSize: {
+                  xs: "0.6rem", // Tamaño de fuente de chips en pantallas pequeñas
+                  sm: "0.7rem", // Tamaño de fuente de chips en pantallas medianas
+                  md: "0.8rem", // Tamaño de fuente de chips en pantallas grandes
+                },
+                paddingLeft: {
+                  xs: "3px", // Relleno de chips en pantallas pequeñas
+                  sm: "4px", // Relleno de chips en pantallas medianas
+                  md: "5px", // Relleno de chips en pantallas grandes
+                },
+                transition: "all 0.1s ease-in-out",
+                "&:hover": {
+                  backgroundColor: chip.color,
+                  color: theme.palette.background.paper,
+                  "& .MuiChip-icon": {
+                    color: theme.palette.background.paper,
+                  },
                 },
               }}
             />
           ))}
         </Stack>
       </CardContent>
+
       <CardActions sx={{ display: "flex", justifyContent: "center", pb: 2 }}>
         <Button
           size="small"
@@ -107,6 +151,13 @@ function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
           href={linkPages}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="View Project Preview"
+          sx={{
+            "&:hover": {
+              backgroundColor: theme.palette.primary.main,
+              color: theme.palette.common.white,
+            },
+          }}
         >
           Preview
         </Button>
@@ -117,6 +168,13 @@ function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
           href={linkHub}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="View GitHub Repository"
+          sx={{
+            "&:hover": {
+              backgroundColor: theme.palette.primary.main,
+              color: theme.palette.common.white,
+            },
+          }}
         >
           GitHub
         </Button>
