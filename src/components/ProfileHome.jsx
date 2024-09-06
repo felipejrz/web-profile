@@ -1,72 +1,63 @@
-import { Container, Typography, Box, Button } from "@mui/material";
-import Grid from "@mui/material/Grid2";
-import ProfileButton from "./ProfileButton";
-import ProfilePhoto from "./ProfilePhoto";
+import { Typography, Box, Button } from "@mui/material";
 import { LuDownload } from "react-icons/lu";
 import { useTheme } from "@mui/material/styles";
+import ProfileButton from "./ProfileButton";
+import ProfilePhoto from "./ProfilePhoto";
 
 function ProfileHome() {
   const theme = useTheme();
 
   return (
     <>
-      <Box
-        sx={{
-          height: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          paddingY: { lg: 8 },
-          paddingX: 2,
-        }}
-      >
+      <Box sx={{ height: "100vh", display: "flex", alignItems: "center" }}>
         <Box
           sx={{
+            width: "100%",
+            height: "100%",
             display: "flex",
-            flexDirection: { xs: "column", lg: "row" }, // flex-col xl:flex-row
-            justifyContent: "space-between", // justify-between
+            flexDirection: { xs: "column", lg: "row" },
+            justifyContent: "center",
             alignItems: "center",
-            width: "100%", // Tomamos todo el ancho
-            maxWidth: "1200px", // Si deseas un contenedor limitado
+            py: { lg: 8 },
           }}
         >
-          {/* Texto */}
+          {/* Text Section */}
           <Box
             sx={{
-              textAlign: { xs: "center", lg: "left" }, // text-center xl:text-left
-              marginBottom: { xs: 6, lg: 0 }, // Ajuste de márgenes
+              textAlign: { xs: "center", lg: "left" },
+              order: { xs: 2, lg: "unset" }, // Mantiene el orden correcto en xs y lg
+              mb: { xs: 8, lg: 0 },
             }}
           >
-            <Typography variant="spam" component="span">
+            <Typography variant="h6" component="span">
               Desarrollador web
             </Typography>
             <Typography
               variant="h1"
               component="h1"
               sx={{
-                marginBottom: 3,
+                mb: 3,
                 fontSize: {
-                  xs: "4rem",
-                  sm: "4rem", 
-                  md: "4rem", 
-                  lg: "6rem", 
-                  xl: "7rem", 
+                  xs: "3rem", 
+                  sm: "4rem",
+                  md: "5rem", 
+                  lg: "7rem",
+                  xl: "8rem", 
                 },
               }}
             >
               Hola, soy <br />
               <Typography
-                variant="span"
-                component="span"
+                variant="h1"
+                component="h1"
                 sx={{
                   color: theme.palette.primary.main,
                   fontSize: {
-                    xs: "4rem",
-                    sm: "4rem", 
-                    md: "4rem", 
-                    lg: "6rem",
-                    xl: "7rem",
+                    xs: "3rem", 
+                    sm: "4rem",
+                    md: "5rem", 
+                    lg: "7rem",
+                    xl: "8rem", 
                   },
                 }}
               >
@@ -75,79 +66,75 @@ function ProfileHome() {
             </Typography>
             <Typography
               variant="body1"
-              sx={{
-                maxWidth: "500px",
-                marginBottom: 3,
-              }}
+              sx={{ maxWidth: "500px", mb: 3, mx: { xs: "auto", lg: 0 } }}
             >
               Soy desarrollador web con experiencia en crear aplicaciones web
               modernas y funcionales. Me encanta resolver problemas y crear
               soluciones elegantes para desafíos tecnológicos.
             </Typography>
 
-            {/* Sección de botones */}
+            {/* Botones */}
             <Box
               sx={{
                 display: "flex",
                 flexDirection: { xs: "column", lg: "row" },
-                gap: 2,
                 alignItems: "center",
+                gap: 2,
               }}
             >
               <Button
-                variant="outlined" // variant outline en Material-UI
+                variant="outlined"
                 size="large"
                 sx={{
                   textTransform: "uppercase",
                   display: "flex",
                   alignItems: "center",
-                  gap: 1, // grap-2 en Tailwind
+                  gap: 1,
                 }}
               >
                 Descargar CV
                 <LuDownload style={{ fontSize: "1.5rem" }} />
               </Button>
-              <Box sx={{ marginTop: { xs: 3, lg: 0 } }}>
-                <ProfileButton
-                  containerStyles={{
-                    display: "flex",
-                    gap: "24px",
-                    flexDirection: "row",
-                  }}
-                  iconStyles={{
-                    width: "2.25rem",
-                    height: "2.25rem",
-                    border: "2px solid",
-                    borderColor: theme.palette.primary.main,
-                    borderRadius: "50%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    color: theme.palette.primary.main,
-                    fontSize: "1rem",
-                    transition: "all 0.5s",
-                    "&:hover": {
-                      color: theme.palette.background.default, // Color del ícono en hover (debe coincidir con el fondo del botón)
-                      backgroundColor: theme.palette.primary.main, // Color de fondo en hover
-                      borderColor: theme.palette.primary.main, // Opcional: Puedes cambiar el color del borde si lo deseas
-                    },
-                  }}
-                />
-              </Box>
+              <ProfileButton
+                containerStyles={{
+                  display: "flex",
+                  gap: "24px",
+                  flexDirection: "row",
+                }}
+                iconStyles={{
+                  width: "2.25rem",
+                  height: "2.25rem",
+                  border: "2px solid",
+                  borderColor: "#f50057",
+                  borderRadius: "50%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  color: "#f50057",
+                  fontSize: "1rem",
+                  transition: "all 0.5s",
+                  "&:hover": {
+                    color: "#ffffff",
+                    backgroundColor: "#f50057",
+                  },
+                }}
+              />
             </Box>
           </Box>
 
-          {/* Foto */}
-          <Box>foto</Box>
+          {/* Photo Section */}
+          <Box sx={{ order: { xs: 1, lg: "unset" }, mx:5}}>
+            <ProfilePhoto />
+          </Box>
         </Box>
       </Box>
-      {/* 
-      <section className="h-full">
+
+      {/* <section className="h-full">
         <div className="containter mx auto h-full">
-          <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-            text
-            <div className="text-center xl:text-left">
-              <spam className="text-xl">Desarrollador web</spam>
+          <div className="flex flex-col lg:flex-row items-center justify-between lg:pt-8 lg:pb-24">
+            text 
+            <div className="text-center lg:text-left order-2 lg:order-none">
+              <spam className="text-lg">Desarrollador web</spam>
               <h1 className="h1 mb-6">
                 {" "}
                 Hola, soy <br />
@@ -159,22 +146,27 @@ function ProfileHome() {
                 soluciones elegantes para desafíos tecnológicos.
               </p>
               Seccion de botones
-              <div className="flex flex-col xl:flex-row items-center grap-8">
+              <div className="flex flex-col lg:flex-row items-center grap-8">
                 <Button
                   variant="outline"
                   size="lg"
                   className="uppercase flex items-center grap-2"
                 >
                   <spam>Descargar CV</spam>
-                  <LuDownload className="text-xl" />
+                  <LuDownload className="text-lg" />
                 </Button>
-                <div className="mb-8 xl:mb-0">
-                  <ProfileButton containerStyles="flex grap-6" iconStyles="w-9 h-9 border border-accent rounder-full flex justify-center items-center text-accent text-base hove:text-primary hover:transition-all duration:500"/>
+                <div className="mb-8 lg:mb-0">
+                  <ProfileButton
+                    containerStyles="flex grap-6"
+                    iconStyles="w-9 h-9 border border-accent rounder-full flex justify-center items-center text-accent text-base hove:text-primary hover:transition-all duration:500"
+                  />
                 </div>
               </div>
             </div>
             Foto
-            <div>foto</div>
+            <div className="order-1 lg:order-none mb-8 lg:mb-0">
+              <ProfilePhoto />
+            </div>
           </div>
         </div>
       </section> */}

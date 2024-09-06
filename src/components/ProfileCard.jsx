@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles"; // Para usar los colores del tema
 
+import * as Icons from '../data/dataIcons'
 import { FaLink, FaGithub } from "react-icons/fa"; //!Importar la libreria de iconos
 function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
   const theme = useTheme(); // Accede al tema actual (claro u oscuro)
