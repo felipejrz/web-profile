@@ -27,7 +27,7 @@ function App() {
         data-scroll-section
         style={{padding: "80px 20px 00px 20px" }}
       >
-        <ProfileHome/>
+        {/* <ProfileHome/> */}
       </div>
       <div
         id="section2"
@@ -45,6 +45,7 @@ function App() {
         <Typography variant="h2">Proyectos</Typography>
         <ProfileListCard/>
       </div>
+      
       <div
         id="section4"
         data-scroll-section

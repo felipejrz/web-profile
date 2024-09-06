@@ -16,7 +16,6 @@ const ProfilePhoto = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100%",
         position: "relative",
         width: 200, // Ajusta el ancho según sea necesario
         height: 200, // Ajusta la altura según sea necesario

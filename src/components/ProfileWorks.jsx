@@ -10,8 +10,9 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 
+// Estilo para el Paper que contiene el contenido del Timeline
 const StyledPaper = styled(Paper)(({ theme }) => ({
-  padding: "6px 16px",
+  padding: "12px",
   boxShadow: 3,
   overflow: "hidden",
   position: "relative",
@@ -20,21 +21,33 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   "&:hover": {
     transform: "scale(1.02)",
   },
-  "&:hover .zoom-image": {
-    transform: "scale(1.05)",
-  },
 }));
 
+// Estilo para el TimelineConnector
 const StyledTimelineConnector = styled(TimelineConnector)(({ theme }) => ({
   backgroundColor: theme.palette.secondary.main,
 }));
 
+// Componente de Timeline para mostrar la experiencia laboral
 function ProfileWorks({ puesto, empresa, localizacion, fechas, texto }) {
   const theme = useTheme();
 
   return (
-    <TimelineItem sx={{ backgroundColor: theme.palette.background.default }}>
-      <TimelineOppositeContent>
+    <TimelineItem
+      sx={{
+        backgroundColor: theme.palette.background.default,
+        [theme.breakpoints.down("md")]: {
+          padding: 1,
+        },
+      }}
+    >
+      <TimelineOppositeContent
+        sx={{
+          [theme.breakpoints.down("md")]: {
+            display: "none", // Oculta el contenido opuesto en pantallas pequeñas
+          },
+        }}
+      >
         <Typography variant="h5" color="primary">
           {fechas}
         </Typography>
@@ -48,23 +61,51 @@ function ProfileWorks({ puesto, empresa, localizacion, fechas, texto }) {
       <TimelineContent>
         <StyledPaper>
           <Typography
-            variant="h4"
-            component="h4"
+            variant="h5"
+            component="h5"
             color="primary"
             sx={{
-              mt: 2,
+              mb: 1,
+              [theme.breakpoints.down("sm")]: {
+                fontSize: "1.0rem",
+              },
             }}
           >
             {puesto} - {empresa}
           </Typography>
-          <Typography variant="h5" component="h5" color="secondary">
+          <Typography
+            variant="h6"
+            component="h6"
+            color="primary"
+            sx={{
+              display: { xs: "block", md: "none" },
+              [theme.breakpoints.down("sm")]: {
+                fontSize: "1.0rem",
+              },
+            }}
+          >
+            {fechas}
+          </Typography>
+          <Typography
+            variant="body1"
+            component="p"
+            color="secondary"
+            sx={{
+              [theme.breakpoints.down("sm")]: {
+                fontSize: ".8rem",
+              },
+            }}
+          >
             {localizacion}
           </Typography>
           <Typography
             variant="body2"
             sx={{
               color: theme.palette.text.secondary,
-              mb: 2,
+              mt: 1,
+              [theme.breakpoints.down("sm")]: {
+                fontSize: "0.6rem", // Ajuste del tamaño de fuente en pantallas pequeñas
+              },
             }}
           >
             {texto}

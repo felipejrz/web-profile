@@ -34,7 +34,7 @@ function ProfileButton() {
       </IconButton>
 
       <IconButton
-        href="https://linkedin.com/in/your-linkedin-profile"
+        href="https://www.linkedin.com/in/felipe-daniel-juarez-alvarez-85216728b/"
         target="_blank"
         rel="noopener noreferrer"
         color="primary"
