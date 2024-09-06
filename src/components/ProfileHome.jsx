@@ -9,7 +9,16 @@ function ProfileHome() {
 
   return (
     <>
-      <Box sx={{ height: "100vh", display: "flex", alignItems: "center" }}>
+      <Box
+        sx={{
+          height: {
+            xs: "100%", // Para pantallas pequeñas (móviles)
+            lg: "calc(100vh - 64px)", // Para pantallas grandes (escritorio)
+          },
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
         <Box
           sx={{
             width: "100%",
@@ -18,7 +27,8 @@ function ProfileHome() {
             flexDirection: { xs: "column", lg: "row" },
             justifyContent: "center",
             alignItems: "center",
-            py: { lg: 8 },
+            py: { lg: 4 },
+            overflow: "hidden", // Asegúrate de que no haya desbordamiento
           }}
         >
           {/* Text Section */}
@@ -26,7 +36,7 @@ function ProfileHome() {
             sx={{
               textAlign: { xs: "center", lg: "left" },
               order: { xs: 2, lg: "unset" }, // Mantiene el orden correcto en xs y lg
-              mb: { xs: 8, lg: 0 },
+              mb: { xs: 4, lg: 0 },
             }}
           >
             <Typography variant="h6" component="span">
@@ -36,13 +46,13 @@ function ProfileHome() {
               variant="h1"
               component="h1"
               sx={{
-                mb: 3,
+                mb: 2,
                 fontSize: {
-                  xs: "3rem", 
+                  xs: "2.5rem",
                   sm: "4rem",
-                  md: "5rem", 
+                  md: "5rem",
                   lg: "7rem",
-                  xl: "8rem", 
+                  xl: "8rem",
                 },
               }}
             >
@@ -53,11 +63,11 @@ function ProfileHome() {
                 sx={{
                   color: theme.palette.primary.main,
                   fontSize: {
-                    xs: "3rem", 
+                    xs: "2.5rem",
                     sm: "4rem",
-                    md: "5rem", 
+                    md: "5rem",
                     lg: "7rem",
-                    xl: "8rem", 
+                    xl: "8rem",
                   },
                 }}
               >
@@ -66,7 +76,15 @@ function ProfileHome() {
             </Typography>
             <Typography
               variant="body1"
-              sx={{ maxWidth: "500px", mb: 3, mx: { xs: "auto", lg: 0 } }}
+              sx={{
+                maxWidth: "500px",
+                mb: 3,
+                mx: { xs: "auto", lg: 0 },
+                fontSize: {
+                  xs: ".9rem",
+                  lg: "1.1rem",
+                },
+              }}
             >
               Soy desarrollador web con experiencia en crear aplicaciones web
               modernas y funcionales. Me encanta resolver problemas y crear
@@ -82,19 +100,25 @@ function ProfileHome() {
                 gap: 2,
               }}
             >
-              <Button
-                variant="outlined"
-                size="large"
-                sx={{
-                  textTransform: "uppercase",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                }}
+              <a
+                href="src\assets\CV_Felipe_Daniel_Juárez_Alvarez.pdf" 
+                download="CV-Felipe-Daniel-Juárez-Alvarez.pdf" 
+                style={{ textDecoration: "none" }} 
               >
-                Descargar CV
-                <LuDownload style={{ fontSize: "1.5rem" }} />
-              </Button>
+                <Button
+                  variant="outlined"
+                  size="large"
+                  sx={{
+                    textTransform: "uppercase",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                  }}
+                >
+                  Descargar CV
+                  <LuDownload style={{ fontSize: "1.5rem" }} />
+                </Button>
+              </a>
               <ProfileButton
                 containerStyles={{
                   display: "flex",
@@ -105,25 +129,27 @@ function ProfileHome() {
                   width: "2.25rem",
                   height: "2.25rem",
                   border: "2px solid",
-                  borderColor: "#f50057",
+                  borderColor: theme.palette.primary.main,
                   borderRadius: "50%",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  color: "#f50057",
+                  color: theme.palette.primary.main,
                   fontSize: "1rem",
                   transition: "all 0.5s",
                   "&:hover": {
-                    color: "#ffffff",
-                    backgroundColor: "#f50057",
+                    color: theme.palette.background.default,
+                    backgroundColor: theme.palette.primary.main,
+                    borderColor: theme.palette.primary.main,
                   },
                 }}
               />
             </Box>
           </Box>
-
           {/* Photo Section */}
-          <Box sx={{ order: { xs: 1, lg: "unset" }, mx:5}}>
+          <Box
+            sx={{ order: { xs: 1, lg: "unset" }, ml: { xs: 0, lg: 10 }, mb: 2 }}
+          >
             <ProfilePhoto />
           </Box>
         </Box>

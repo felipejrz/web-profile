@@ -32,7 +32,7 @@ function App() {
       <div
         id="section2"
         data-scroll-section
-        style={{padding: "10px 20px 0px 20px" }}
+        style={{padding: "0px 20px 0px 20px" }}
       >
         <Typography  data-scroll data-scroll-speed="1" variant="h2" >Experiencia Laboral</Typography>
         <ProfileTimeLine/>
