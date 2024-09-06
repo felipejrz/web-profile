@@ -2,9 +2,9 @@
 import React from "react";
 import ProfileNavBar from "./components/ProfileNavBar";
 import { Typography } from "@mui/material";
-import ProfileListCard from './components/ProfileListCard'
-import ProfileTimeLine from './components/ProfileTimeLine'
-import ProfileHome from './components/ProfileHome'
+import ProfileListCard from "./components/ProfileListCard";
+import ProfileTimeLine from "./components/ProfileTimeLine";
+import ProfileHome from "./components/ProfileHome";
 
 //* Función para desplazarse a una sección específica
 function App() {
@@ -25,31 +25,33 @@ function App() {
       <div
         id="section1"
         data-scroll-section
-        style={{padding: "80px 20px 00px 20px" }}
+        style={{ padding: "80px 20px 00px 20px" }}
       >
-        {/* <ProfileHome/> */}
+        <ProfileHome />
       </div>
       <div
         id="section2"
         data-scroll-section
-        style={{padding: "0px 20px 0px 20px" }}
+        style={{ padding: "0px 20px 0px 20px" }}
       >
-        <Typography  data-scroll data-scroll-speed="1" variant="h2" >Experiencia Laboral</Typography>
-        <ProfileTimeLine/>
+        <Typography data-scroll data-scroll-speed="1" variant="h2">
+          Experiencia Laboral
+        </Typography>
+        <ProfileTimeLine />
       </div>
       <div
         id="section3"
         data-scroll-section
-        style={{padding: "0px 20px 20px 20px" }}
-        >
+        style={{ padding: "0px 20px 20px 20px" }}
+      >
         <Typography variant="h2">Proyectos</Typography>
-        <ProfileListCard/>
+        <ProfileListCard />
       </div>
-      
+
       <div
         id="section4"
         data-scroll-section
-        style={{ height: "100vh", padding: "0px 20px 20px 20px" }}
+        style={{ padding: "0px 20px 20px 20px" }}
       >
         <Typography variant="h2">Contacto</Typography>
         <Typography variant="body1">Contenido de contacto...</Typography>
