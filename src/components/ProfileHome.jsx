@@ -5,7 +5,6 @@ import ProfilePhoto from "./ProfilePhoto";
 import { LuDownload } from "react-icons/lu";
 import { useTheme } from "@mui/material/styles";
 
-
 function ProfileHome() {
   const theme = useTheme();
 
@@ -42,9 +41,35 @@ function ProfileHome() {
             <Typography variant="spam" component="span">
               Desarrollador web
             </Typography>
-            <Typography variant="h1" component="h1" sx={{ marginBottom: 3 }}>
+            <Typography
+              variant="h1"
+              component="h1"
+              sx={{
+                marginBottom: 3,
+                fontSize: {
+                  xs: "4rem",
+                  sm: "4rem", 
+                  md: "4rem", 
+                  lg: "6rem", 
+                  xl: "7rem", 
+                },
+              }}
+            >
               Hola, soy <br />
-              <Typography variant="spam" component="span" color="primary">
+              <Typography
+                variant="span"
+                component="span"
+                sx={{
+                  color: theme.palette.primary.main,
+                  fontSize: {
+                    xs: "4rem",
+                    sm: "4rem", 
+                    md: "4rem", 
+                    lg: "6rem",
+                    xl: "7rem",
+                  },
+                }}
+              >
                 Felipe Juárez
               </Typography>
             </Typography>
@@ -90,18 +115,18 @@ function ProfileHome() {
                     flexDirection: "row",
                   }}
                   iconStyles={{
-                    width: "2.25rem", 
+                    width: "2.25rem",
                     height: "2.25rem",
-                    border: "2px solid", 
-                    borderColor: theme.palette.primary.main, 
+                    border: "2px solid",
+                    borderColor: theme.palette.primary.main,
                     borderRadius: "50%",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    color: theme.palette.primary.main, 
+                    color: theme.palette.primary.main,
                     fontSize: "1rem",
-                    transition: "all 0.5s", 
-                    '&:hover': {
+                    transition: "all 0.5s",
+                    "&:hover": {
                       color: theme.palette.background.default, // Color del ícono en hover (debe coincidir con el fondo del botón)
                       backgroundColor: theme.palette.primary.main, // Color de fondo en hover
                       borderColor: theme.palette.primary.main, // Opcional: Puedes cambiar el color del borde si lo deseas
