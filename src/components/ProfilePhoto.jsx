@@ -46,8 +46,8 @@ function ProfilePhoto() {
 
       {/* Círculo animado */}
       <motion.svg
-        width={{ xs: "300px", lg: "506px" }}
-        height={{ xs: "300px", lg: "506px" }}
+        width="350px"
+        height="350px"
         fill="transparent"
         viewBox="0 0 506 506"
         xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ function ProfilePhoto() {
           position: "absolute",
           top: 0,
           left: 0,
-          zIndex: 1, // Asegura que el círculo esté sobre la imagen
+          zIndex: 1,
         }}
       >
         <motion.circle

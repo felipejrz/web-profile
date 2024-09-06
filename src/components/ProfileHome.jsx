@@ -55,23 +55,23 @@ function ProfileHome() {
               },
             }}
           >
-            Hola, soy <br />
-            <Typography
-              variant="h3"
-              component="h2"
-              sx={{
-                color: theme.palette.primary.main,
-                fontSize: {
-                  xs: "2.5rem",
-                  sm: "4rem",
-                  md: "5rem",
-                  lg: "7rem",
-                  xl: "8rem",
-                },
-              }}
-            >
-              Felipe Juárez
-            </Typography>
+            Hola, soy
+          </Typography>
+          <Typography
+            variant="h3"
+            component="h2"
+            sx={{
+              color: theme.palette.primary.main,
+              fontSize: {
+                xs: "2.5rem",
+                sm: "4rem",
+                md: "5rem",
+                lg: "7rem",
+                xl: "8rem",
+              },
+            }}
+          >
+            Felipe Juárez
           </Typography>
           <Typography
             variant="body1"
