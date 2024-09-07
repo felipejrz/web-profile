@@ -27,7 +27,6 @@ function ProfileHome() {
           justifyContent: "center",
           alignItems: "center",
           py: { lg: 4 },
-          overflow: "hidden", // Asegúrate de que no haya desbordamiento
         }}
       >
         {/* Text Section */}

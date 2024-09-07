@@ -1,6 +1,8 @@
 import { Box } from "@mui/material";
 import { motion } from "framer-motion";
 import { useTheme } from "@mui/material/styles";
+import { width } from "@mui/system";
+import { height } from "@fortawesome/free-brands-svg-icons/fa500px";
 
 function ProfilePhoto() {
   const theme = useTheme();

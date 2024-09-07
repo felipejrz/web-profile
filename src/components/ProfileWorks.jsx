@@ -84,6 +84,11 @@ function ProfileWorks({ puesto, empresa, localizacion, fechas, texto }) {
                 sm: "1.4rem",
                 md: "1.6rem",
               },
+              display: {
+                md: "none",
+                lg: "none",
+                xl: "none", 
+              },
             }}
           >
             {fechas}

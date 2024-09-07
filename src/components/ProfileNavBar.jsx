@@ -68,23 +68,23 @@ function ProfileNavBar({ scrollToSection }) {
     const handleScroll = () => {
       const offset = window.scrollY;
       setIsScrolled(offset > 0);
-
       const currentSection = navItems.find((item) => {
         const element = document.getElementById(item.id);
         if (element) {
           const rect = element.getBoundingClientRect();
-          return rect.top <= 80 && rect.bottom > 80;
+          return rect.top <= window.innerHeight / 2 && rect.bottom > window.innerHeight / 2;
         }
         return false;
       });
       setActiveSection(currentSection ? currentSection.id : "");
     };
-
+  
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-
+  
     return () => window.removeEventListener("scroll", handleScroll);
   }, [navItems]);
+  
 
   return (
     <Box
@@ -111,6 +111,7 @@ function ProfileNavBar({ scrollToSection }) {
             "background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
           width: { xs: "85%", sm: "65%", md: "40%", lg: "32%", xl: "30%" },
           maxWidth: "100%",
+          
         }}
       >
         <Toolbar
@@ -177,6 +178,7 @@ function ProfileNavBar({ scrollToSection }) {
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
           onClose={handleMenuClose}
+          
         >
           <MenuItem onClick={() => handleThemeChange("light")}>
             <Icons.MdLightMode fontSize="small" />
