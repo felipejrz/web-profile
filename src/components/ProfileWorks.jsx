@@ -42,7 +42,7 @@ function ProfileWorks({ puesto, empresa, localizacion, fechas, texto }) {
     >
       <TimelineOppositeContent
         sx={{
-          display: { xs: "none", sm: "none", md: "none" }, 
+          display: { xs: "none", sm: "none", md: "none", lg: "block", xl: "block" }, 
         }}
       >
         <Typography variant="h5" color="primary">
