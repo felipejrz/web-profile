@@ -13,7 +13,7 @@ import { useTheme } from "@mui/material/styles";
 import { FaLink, FaGithub } from "react-icons/fa";
 
 function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
-  const theme = useTheme(); // Accede al tema actual (claro u oscuro)
+  const theme = useTheme();
 
   return (
     <Card
@@ -25,14 +25,14 @@ function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
         boxShadow: 4,
         overflow: "hidden",
         position: "relative",
-        transition: "transform 0.3s ease-in-out",
-        backgroundColor: theme.palette.background.default,
         borderRadius: "16px",
+        backgroundColor: theme.palette.background.default,
+        transition: "transform 0.3s ease-in-out",
         "&:hover": {
           transform: "scale(1.02)", // Zoom Card
         },
         "&:hover .zoom-image": {
-          transform: "scale(1.08)", // Zoom imagen
+          transform: "scale(1.04)", // Zoom imagen
         },
       }}
     >
@@ -92,9 +92,9 @@ function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
           sx={{
             flexWrap: "wrap",
             gap: {
-              xs: 0.5, // Espaciado entre chips en pantallas pequeñas
-              sm: 0.75, // Espaciado entre chips en pantallas medianas
-              md: 1, // Espaciado entre chips en pantallas grandes
+              xs: 0.5,
+              sm: 0.75,
+              md: 1,
             },
             mt: 2,
           }}
@@ -120,14 +120,14 @@ function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
                       : chip.color,
                 },
                 fontSize: {
-                  xs: "0.6rem", // Tamaño de fuente de chips en pantallas pequeñas
-                  sm: "0.7rem", // Tamaño de fuente de chips en pantallas medianas
-                  md: "0.8rem", // Tamaño de fuente de chips en pantallas grandes
+                  xs: "0.6rem",
+                  sm: "0.7rem",
+                  md: "0.8rem",
                 },
                 paddingLeft: {
-                  xs: "3px", // Relleno de chips en pantallas pequeñas
-                  sm: "4px", // Relleno de chips en pantallas medianas
-                  md: "5px", // Relleno de chips en pantallas grandes
+                  xs: "3px",
+                  sm: "4px",
+                  md: "5px",
                 },
                 transition: "all 0.1s ease-in-out",
                 "&:hover": {

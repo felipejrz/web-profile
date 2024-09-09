@@ -61,7 +61,7 @@ function ProfileNavBar({ scrollToSection }) {
     { id: "section1", label: "Home" },
     { id: "section2", label: "Experiencia" },
     { id: "section3", label: "Proyectos" },
-    { id: "section4", label: "Contacto" },
+    { id: "section4", label: "Skills" },
   ];
 
   useEffect(() => {

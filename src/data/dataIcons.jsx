@@ -1,23 +1,69 @@
-import { FaReact, FaNodeJs } from 'react-icons/fa';
-import { SiReactbootstrap, SiVite, SiFramer, SiMui , SiGithubpages, SiReactrouter} from 'react-icons/si';
-import { GiSteamLocomotive } from 'react-icons/gi';
-
-
-import { MdLightMode } from "react-icons/md";
-import { MdDarkMode } from "react-icons/md";
-import { MdOutlineSettingsBrightness } from "react-icons/md";
-
-export {
+import {
   FaReact,
   FaNodeJs,
+  FaHtml5,
+  FaCss3,
+  FaPython,
+  FaJava,
+  FaGit,
+  FaDocker,
+  FaBootstrap,   
+} from "react-icons/fa";
+
+import {
   SiReactbootstrap,
   SiVite,
   SiFramer,
   SiMui,
-  GiSteamLocomotive,
   SiGithubpages,
   SiReactrouter,
+  SiTypescript,
+  SiNestjs,
+  SiMysql,
+  SiPostgresql,
+  SiMongodb,
+  SiDjango,    
+} from "react-icons/si";
+
+import { GiSteamLocomotive } from "react-icons/gi";
+import {
   MdLightMode,
   MdDarkMode,
-  MdOutlineSettingsBrightness
+  MdOutlineSettingsBrightness,
+} from "react-icons/md";
+import { Facebook, GitHub, Instagram, LinkedIn } from "@mui/icons-material";
+import { IoLogoJavascript } from "react-icons/io";
+
+// Exportación
+export {
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3,
+  FaPython,
+  FaJava,
+  FaGit,
+  FaDocker,
+  FaBootstrap,      
+  SiReactbootstrap,
+  SiVite,
+  SiFramer,
+  SiMui,
+  SiGithubpages,
+  SiReactrouter,
+  SiTypescript,
+  SiNestjs,
+  SiMysql,
+  SiPostgresql,
+  SiMongodb,
+  SiDjango,         
+  GiSteamLocomotive,
+  MdLightMode,
+  MdDarkMode,
+  MdOutlineSettingsBrightness,
+  Facebook,
+  GitHub,
+  Instagram,
+  LinkedIn,
+  IoLogoJavascript,
 };

@@ -1,10 +1,10 @@
-// src/App.jsx o donde manejes el scroll
-import React from "react";
-import ProfileNavBar from "./components/ProfileNavBar";
 import { Typography } from "@mui/material";
+import ProfileNavBar from "./components/ProfileNavBar";
+import ProfileHome from './components/ProfileHome'
 import ProfileListCard from './components/ProfileListCard'
 import ProfileTimeLine from './components/ProfileTimeLine'
-import ProfileHome from './components/ProfileHome'
+import ProfileListSkills from "./components/ProfileListSkills";
+import ProfileFooter from './components/ProfileFooter'
 
 //* Función para desplazarse a una sección específica
 function App() {
@@ -51,9 +51,10 @@ function App() {
         data-scroll-section
         style={{padding: "0px 20px 20px 20px" }}
       >
-        <Typography variant="h2">Contacto</Typography>
-        <Typography variant="body1">Contenido de contacto...</Typography>
+        <Typography variant="h2">Skills</Typography>
+        <ProfileListSkills/>
       </div>
+      <ProfileFooter/>
     </div>
   );
 }

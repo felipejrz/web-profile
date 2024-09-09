@@ -11,10 +11,10 @@ import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
-  padding: "12px",
-  boxShadow: 3,
   overflow: "hidden",
   position: "relative",
+  padding: "12px",
+  boxShadow: 4,
   transition: "transform 0.3s ease-in-out",
   backgroundColor: theme.palette.background.default,
   "&:hover": {
