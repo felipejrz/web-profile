@@ -1,6 +1,6 @@
 import { Typography, Box, Button } from "@mui/material";
-import { LuDownload } from "react-icons/lu";
 import { useTheme } from "@mui/material/styles";
+import * as Icons from '../data/dataIcons'
 import ProfileButton from "./ProfileButton";
 import ProfilePhoto from "./ProfilePhoto";
 
@@ -11,8 +11,8 @@ function ProfileHome() {
     <Box
       sx={{
         height: {
-          xs: "100%", // Para pantallas pequeñas (móviles)
-          lg: "calc(100vh - 64px)", // Para pantallas grandes (escritorio)
+          xs: "100%",
+          lg: "calc(100vh - 64px)",
         },
         display: "flex",
         alignItems: "center",
@@ -114,7 +114,7 @@ function ProfileHome() {
                 }}
               >
                 Descargar CV
-                <LuDownload style={{ fontSize: "1.5rem" }} />
+                <Icons.LuDownload style={{ fontSize: "1.5rem" }} />
               </Button>
             </a>
             <ProfileButton

@@ -10,7 +10,7 @@ import {
   Box,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { FaLink, FaGithub } from "react-icons/fa";
+import * as Icons from '../data/dataIcons'
 
 function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
   const theme = useTheme();
@@ -147,7 +147,7 @@ function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
         <Button
           size="small"
           variant="outlined"
-          startIcon={<FaLink />}
+          startIcon={<Icons.FaLink />}
           href={linkPages}
           target="_blank"
           rel="noopener noreferrer"
@@ -164,7 +164,7 @@ function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
         <Button
           size="small"
           variant="outlined"
-          startIcon={<FaGithub />}
+          startIcon={<Icons.GitHub />}
           href={linkHub}
           target="_blank"
           rel="noopener noreferrer"

@@ -7,7 +7,8 @@ import {
   FaJava,
   FaGit,
   FaDocker,
-  FaBootstrap,   
+  FaBootstrap,
+  FaLink,
 } from "react-icons/fa";
 
 import {
@@ -22,7 +23,7 @@ import {
   SiMysql,
   SiPostgresql,
   SiMongodb,
-  SiDjango,    
+  SiDjango,
 } from "react-icons/si";
 
 import { GiSteamLocomotive } from "react-icons/gi";
@@ -31,8 +32,16 @@ import {
   MdDarkMode,
   MdOutlineSettingsBrightness,
 } from "react-icons/md";
-import { Facebook, GitHub, Instagram, LinkedIn } from "@mui/icons-material";
+import {
+  Email,
+  Facebook,
+  GitHub,
+  Instagram,
+  LinkedIn,
+} from "@mui/icons-material";
 import { IoLogoJavascript } from "react-icons/io";
+import { LuDownload } from "react-icons/lu";
+
 
 // Exportación
 export {
@@ -44,7 +53,8 @@ export {
   FaJava,
   FaGit,
   FaDocker,
-  FaBootstrap,      
+  FaBootstrap,
+  FaLink,
   SiReactbootstrap,
   SiVite,
   SiFramer,
@@ -56,14 +66,16 @@ export {
   SiMysql,
   SiPostgresql,
   SiMongodb,
-  SiDjango,         
+  SiDjango,
   GiSteamLocomotive,
   MdLightMode,
   MdDarkMode,
   MdOutlineSettingsBrightness,
+  Email,
   Facebook,
   GitHub,
   Instagram,
   LinkedIn,
   IoLogoJavascript,
+  LuDownload
 };

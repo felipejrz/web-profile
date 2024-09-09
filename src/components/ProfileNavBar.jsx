@@ -1,3 +1,4 @@
+import { ProfileContext } from "../context/ProfileContext";
 import { useState, useEffect, useContext } from "react";
 import {
   AppBar,
@@ -10,7 +11,6 @@ import {
   IconButton,
 } from "@mui/material";
 import { motion } from "framer-motion";
-import { ProfileContext } from "../context/ProfileContext";
 import * as Icons from '../data/dataIcons'
 
 function ProfileNavBar({ scrollToSection }) {

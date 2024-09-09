@@ -22,24 +22,24 @@ const lightThemeOptions = {
     },
   },
   typography: {
-    fontFamily: 'JetBrains Mono, Arial, sans-serif', // Fuente para el cuerpo de texto
+    fontFamily: 'JetBrains Mono, Arial, sans-serif', 
     h1: {
-      fontFamily: 'Outward Block, Arial, sans-serif', // Fuente personalizada para h1
+      fontFamily: 'Finesse-Roman, Arial, sans-serif',
     },
     h2: {
-      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontFamily: 'Finesse-Roman, Arial, sans-serif',
     },
     h3: {
-      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontFamily: 'Finesse-Roman, Arial, sans-serif',
     },
     h4: {
-      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontFamily: 'Finesse-Roman, Arial, sans-serif',
     },
     h5: {
-      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontFamily: 'Finesse-Roman, Arial, sans-serif',
     },
     h6: {
-      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontFamily: 'Finesse-Roman, Arial, sans-serif',
     },
   },
 };
@@ -68,24 +68,24 @@ const darkThemeOptions = {
     },
   },
   typography: {
-    fontFamily: 'JetBrains Mono, Arial, sans-serif', // Fuente para el cuerpo de texto
+    fontFamily: 'JetBrains Mono, Arial, sans-serif', 
     h1: {
-      fontFamily: 'Outward Block, Arial, sans-serif', // Fuente personalizada para h1
+      fontFamily: 'Finesse-Roman, Arial, sans-serif', 
     },
     h2: {
-      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontFamily: 'Finesse-Roman, Arial, sans-serif',
     },
     h3: {
-      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontFamily: 'Finesse-Roman, Arial, sans-serif',
     },
     h4: {
-      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontFamily: 'Finesse-Roman, Arial, sans-serif',
     },
     h5: {
-      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontFamily: 'Finesse-Roman, Arial, sans-serif',
     },
     h6: {
-      fontFamily: 'Outward Block, Arial, sans-serif',
+      fontFamily: 'Finesse-Roman, Arial, sans-serif',
     },
   },
 };

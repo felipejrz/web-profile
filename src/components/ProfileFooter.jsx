@@ -1,13 +1,13 @@
 import { Box, Typography, Link, IconButton } from "@mui/material";
-import { Facebook, GitHub, Instagram, LinkedIn } from "@mui/icons-material";
 import { useTheme } from "@mui/material/styles";
+import * as Icons from '../data/dataIcons'
 
 const socials = [
-  { icon: <Facebook />, path: "" },
-  { icon: <Instagram />, path: "" },
-  { icon: <GitHub />, path: "https://github.com/felipejrz" },
+  { icon: <Icons.Facebook />, path: "" },
+  { icon: <Icons.Instagram />, path: "" },
+  { icon: <Icons.GitHub />, path: "https://github.com/felipejrz" },
   {
-    icon: <LinkedIn />,
+    icon: <Icons.LinkedIn />,
     path: "https://www.linkedin.com/in/felipe-daniel-juarez-alvarez-85216728b/",
   },
 ];
@@ -29,7 +29,7 @@ function ProfileFooter() {
         boxShadow: "0 -2px 10px rgba(0, 0, 0, 0.1)",
         transition: "background-color 0.3s ease",
         "&:hover": {
-          backgroundColor: `rgba(${theme.palette.secondary.main}, 0.9)`, // Efecto de hover en el fondo
+          backgroundColor: `rgba(${theme.palette.secondary.main}, 0.9)`,
         },
       }}
     >
@@ -65,16 +65,16 @@ function ProfileFooter() {
             sx={{
               color: theme.palette.text.primary,
               "&:hover": {
-                color: theme.palette.primary.light, // Cambia el color al pasar el ratón
+                color: theme.palette.primary.light, 
               },
             }}
           >
             <IconButton
               sx={{
                 color: "inherit",
-                transition: "transform 0.3s ease", // Transición en el hover
+                transition: "transform 0.3s ease", 
                 "&:hover": {
-                  transform: "scale(1.2)", // Efecto de zoom en el hover
+                  transform: "scale(1.2)", 
                 },
               }}
             >

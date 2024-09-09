@@ -1,8 +1,6 @@
 import { Box } from "@mui/material";
 import { motion } from "framer-motion";
 import { useTheme } from "@mui/material/styles";
-import { width } from "@mui/system";
-import { height } from "@fortawesome/free-brands-svg-icons/fa500px";
 
 function ProfilePhoto() {
   const theme = useTheme();
@@ -12,8 +10,8 @@ function ProfilePhoto() {
       sx={{
         width: "100%",
         height: "100%",
-        position: "relative", // Contenedor con posición relativa
-        overflow: "hidden", // Asegura que nada se desborde del contenedor
+        position: "relative", 
+        overflow: "hidden", 
       }}
     >
       {/* Imagen */}
@@ -39,7 +37,7 @@ function ProfilePhoto() {
             width: "100%",
             height: "100%",
             objectFit: "contain",
-            position: "absolute", // Asegura que la imagen ocupe el contenedor
+            position: "absolute", 
             top: 0,
             left: 0,
           }}

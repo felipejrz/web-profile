@@ -41,7 +41,7 @@ function ProfileSkills({ icon: IconComponent, color }) {
             justifyContent: "center",
             alignItems: "center",
             fontSize: { xs: 40, sm: 50, md: 60 },
-            color: "inherit", // El color del ícono hereda el color del Card
+            color: "inherit", 
           }}
         >
           <IconComponent />

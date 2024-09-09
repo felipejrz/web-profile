@@ -1,14 +1,14 @@
-import { styled } from "@mui/material/styles";
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-import LaptopMacIcon from "@mui/icons-material/LaptopMac";
-import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
+import {
+  TimelineItem,
+  TimelineDot,
+  TimelineSeparator,
+  TimelineConnector,
+  TimelineContent,
+  TimelineOppositeContent,
+} from "@mui/lab/";
+import { Typography, Paper, styled } from "@mui/material/";
 import { useTheme } from "@mui/material/styles";
+import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
   overflow: "hidden",
@@ -42,9 +42,7 @@ function ProfileWorks({ puesto, empresa, localizacion, fechas, texto }) {
     >
       <TimelineOppositeContent
         sx={{
-          [theme.breakpoints.down("md")]: {
-            display: "none", // Oculta el contenido opuesto en pantallas pequeñas
-          },
+          display: { xs: "none", sm: "none", md: "none" }, 
         }}
       >
         <Typography variant="h5" color="primary">
@@ -87,7 +85,7 @@ function ProfileWorks({ puesto, empresa, localizacion, fechas, texto }) {
               display: {
                 md: "none",
                 lg: "none",
-                xl: "none", 
+                xl: "none",
               },
             }}
           >
