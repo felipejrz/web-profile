@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, IconButton, Link } from "@mui/material";
 import {Email, GitHub, LinkedIn} from '../data/dataIcons'
 

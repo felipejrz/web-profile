@@ -1,6 +1,6 @@
 import { Box, Typography, Link, IconButton } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
 import {Facebook, Instagram, GitHub, LinkedIn} from '../data/dataIcons'
+import { useTheme } from "@mui/material/styles";
 
 const socials = [
   { icon: <Facebook />, path: "" },

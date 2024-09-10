@@ -1,8 +1,8 @@
 import { Typography, Box, Button } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import { LuDownload } from "../data/dataIcons";
 import ProfileButton from "./ProfileButton";
 import ProfilePhoto from "./ProfilePhoto";
-import { LuDownload } from "../data/dataIcons";
 
 function ProfileHome() {
   const theme = useTheme();

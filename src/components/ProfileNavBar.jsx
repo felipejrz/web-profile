@@ -11,7 +11,11 @@ import {
   IconButton,
 } from "@mui/material";
 import { motion } from "framer-motion";
-import * as Icons from '../data/dataIcons'
+import {
+  MdLightMode,
+  MdDarkMode,
+  MdOutlineSettingsBrightness,
+} from "../data/dataIcons";
 
 function ProfileNavBar({ scrollToSection }) {
   const theme = useTheme();
@@ -48,12 +52,12 @@ function ProfileNavBar({ scrollToSection }) {
   const getCurrentIcon = () => {
     switch (themeMode) {
       case "light":
-        return <Icons.MdLightMode fontSize="inherit" />;
+        return <MdLightMode fontSize="inherit" />;
       case "dark":
-        return <Icons.MdDarkMode fontSize="inherit" />;
+        return <MdDarkMode fontSize="inherit" />;
       case "system":
       default:
-        return <Icons.MdOutlineSettingsBrightness fontSize="inherit" />;
+        return <MdOutlineSettingsBrightness fontSize="inherit" />;
     }
   };
 
@@ -72,19 +76,21 @@ function ProfileNavBar({ scrollToSection }) {
         const element = document.getElementById(item.id);
         if (element) {
           const rect = element.getBoundingClientRect();
-          return rect.top <= window.innerHeight / 2 && rect.bottom > window.innerHeight / 2;
+          return (
+            rect.top <= window.innerHeight / 2 &&
+            rect.bottom > window.innerHeight / 2
+          );
         }
         return false;
       });
       setActiveSection(currentSection ? currentSection.id : "");
     };
-  
+
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-  
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, [navItems]);
-  
 
   return (
     <Box
@@ -111,7 +117,6 @@ function ProfileNavBar({ scrollToSection }) {
             "background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
           width: { xs: "85%", sm: "65%", md: "40%", lg: "32%", xl: "30%" },
           maxWidth: "100%",
-          
         }}
       >
         <Toolbar
@@ -146,7 +151,13 @@ function ProfileNavBar({ scrollToSection }) {
                   onClick={() => scrollToSection(item.id)}
                   sx={{
                     cursor: "pointer",
-                    fontSize: { xs: "0.65rem", sm: ".9rem", md: "0.8rem", lg: "0.8rem", xl:"1rem"},
+                    fontSize: {
+                      xs: "0.65rem",
+                      sm: ".9rem",
+                      md: "0.8rem",
+                      lg: "0.8rem",
+                      xl: "1rem",
+                    },
                     color:
                       activeSection === item.id || hoveredItem === item.id
                         ? theme.palette.primary.main
@@ -165,7 +176,7 @@ function ProfileNavBar({ scrollToSection }) {
                 onClick={handleMenuClick}
                 sx={{
                   color: theme.palette.text.primary,
-                  fontSize: { xs: "1.1rem", sm: "1.5rem", md: "1.2rem" }, 
+                  fontSize: { xs: "1.1rem", sm: "1.5rem", md: "1.2rem" },
                 }}
               >
                 {getCurrentIcon()}
@@ -178,18 +189,17 @@ function ProfileNavBar({ scrollToSection }) {
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
           onClose={handleMenuClose}
-          
         >
           <MenuItem onClick={() => handleThemeChange("light")}>
-            <Icons.MdLightMode fontSize="small" />
+            <MdLightMode fontSize="small" />
             &nbsp;Light
           </MenuItem>
           <MenuItem onClick={() => handleThemeChange("dark")}>
-            <Icons.MdDarkMode fontSize="small" />
+            <MdDarkMode fontSize="small" />
             &nbsp;Dark
           </MenuItem>
           <MenuItem onClick={() => handleThemeChange("system")}>
-            <Icons.MdOutlineSettingsBrightness fontSize="small" />
+            <MdOutlineSettingsBrightness fontSize="small" />
             &nbsp;System
           </MenuItem>
         </Menu>

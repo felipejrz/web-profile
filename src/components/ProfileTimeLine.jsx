@@ -1,6 +1,6 @@
-import { styled } from "@mui/material/styles";
 import Timeline from "@mui/lab/Timeline";
 import ProfileWorks from "./ProfileWorks";
+import { styled } from "@mui/material/styles";
 import { worksData } from "../data/dataWorks";
 
 const StyledTimeline = styled(Timeline)(({ theme }) => ({

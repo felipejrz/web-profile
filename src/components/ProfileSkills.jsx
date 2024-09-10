@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, CardContent, Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
