@@ -10,7 +10,7 @@ import {
   Box,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import * as Icons from '../data/dataIcons'
+import {FaLink, GitHub} from '../data/dataIcons'
 
 function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
   const theme = useTheme();
@@ -147,7 +147,7 @@ function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
         <Button
           size="small"
           variant="outlined"
-          startIcon={<Icons.FaLink />}
+          startIcon={<FaLink />}
           href={linkPages}
           target="_blank"
           rel="noopener noreferrer"
@@ -164,7 +164,7 @@ function ProfileCard({ titulo, imagen, texto, listChips, linkPages, linkHub }) {
         <Button
           size="small"
           variant="outlined"
-          startIcon={<Icons.GitHub />}
+          startIcon={<GitHub />}
           href={linkHub}
           target="_blank"
           rel="noopener noreferrer"

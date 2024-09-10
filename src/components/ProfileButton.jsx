@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, IconButton, Link } from "@mui/material";
-import * as Icons from '../data/dataIcons'
+import {Email, GitHub, LinkedIn} from '../data/dataIcons'
 
 const socials = [
-  { icon: <Icons.Email />, path: "mailto:felipe_jrz19@outlook.es" },
-  { icon: <Icons.GitHub />, path: "https://github.com/felipejrz" },
-  { icon: <Icons.LinkedIn />, path: "https://www.linkedin.com/in/felipe-daniel-juarez-alvarez-85216728b/" },
+  { icon: <Email />, path: "mailto:felipe_jrz19@outlook.es" },
+  { icon: <GitHub />, path: "https://github.com/felipejrz" },
+  { icon: <LinkedIn />, path: "https://www.linkedin.com/in/felipe-daniel-juarez-alvarez-85216728b/" },
 ];
 
 function ProfileButton({ containerStyles, iconStyles }) {

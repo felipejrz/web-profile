@@ -31,7 +31,7 @@ function ProfilePhoto() {
         }}
       >
         <img
-          src="src\assets\foto-home.png"
+          src="/assets/foto-home.png"
           alt="Imagen"
           style={{
             width: "100%",

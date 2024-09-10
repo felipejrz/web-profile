@@ -1,13 +1,13 @@
 import { Box, Typography, Link, IconButton } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import * as Icons from '../data/dataIcons'
+import {Facebook, Instagram, GitHub, LinkedIn} from '../data/dataIcons'
 
 const socials = [
-  { icon: <Icons.Facebook />, path: "" },
-  { icon: <Icons.Instagram />, path: "" },
-  { icon: <Icons.GitHub />, path: "https://github.com/felipejrz" },
+  { icon: <Facebook />, path: "" },
+  { icon: <Instagram />, path: "" },
+  { icon: <GitHub />, path: "https://github.com/felipejrz" },
   {
-    icon: <Icons.LinkedIn />,
+    icon: <LinkedIn />,
     path: "https://www.linkedin.com/in/felipe-daniel-juarez-alvarez-85216728b/",
   },
 ];

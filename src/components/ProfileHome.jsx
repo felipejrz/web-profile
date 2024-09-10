@@ -1,8 +1,8 @@
 import { Typography, Box, Button } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import * as Icons from '../data/dataIcons'
 import ProfileButton from "./ProfileButton";
 import ProfilePhoto from "./ProfilePhoto";
+import { LuDownload } from "../data/dataIcons";
 
 function ProfileHome() {
   const theme = useTheme();
@@ -99,7 +99,7 @@ function ProfileHome() {
             }}
           >
             <a
-              href="public\CV_Felipe_Daniel_Juárez_Alvarez.pdf"
+              href="assets/CV_Felipe_Daniel_Juárez_Alvarez.pdf"
               download="CV-Felipe-Daniel-Juárez-Alvarez.pdf"
               style={{ textDecoration: "none" }}
             >
@@ -114,7 +114,7 @@ function ProfileHome() {
                 }}
               >
                 Descargar CV
-                <Icons.LuDownload style={{ fontSize: "1.5rem" }} />
+                <LuDownload style={{ fontSize: "1.5rem" }} />
               </Button>
             </a>
             <ProfileButton
