@@ -31,4 +31,3 @@ Puedes visitar la página web en [https://felipejuarez-profile.netlify.app](http
 
 - **Felipe Juárez**  
   - [GitHub](https://github.com/tu_usuario)  
-  - [LinkedIn](https://linkedin.com/in/tu_usuario)
