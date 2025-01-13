@@ -30,4 +30,4 @@ Puedes visitar la página web en [https://felipejuarez-profile.netlify.app](http
 ## Autor ✨
 
 - **Felipe Juárez**  
-  - [GitHub](https://github.com/tu_usuario)  
+  - [felipejrz](https://github.com/felipejrz)  
