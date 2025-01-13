@@ -9,6 +9,7 @@ import {
   FaDocker,
   FaBootstrap,
   FaLink,
+  FaPhp,
 } from "react-icons/fa";
 
 import {
@@ -39,9 +40,18 @@ import {
   Instagram,
   LinkedIn,
 } from "@mui/icons-material";
+
 import { IoLogoJavascript } from "react-icons/io";
+
 import { LuDownload } from "react-icons/lu";
 
+import {
+  SiLaravel,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiExpress,
+  SiAngular,
+} from "react-icons/si";
 
 // Exportación
 export {
@@ -76,6 +86,12 @@ export {
   GitHub,
   Instagram,
   LinkedIn,
+  FaPhp,
   IoLogoJavascript,
-  LuDownload
+  LuDownload,
+  SiLaravel,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiExpress,
+  SiAngular,
 };

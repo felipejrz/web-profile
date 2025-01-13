@@ -1,5 +1,5 @@
-import { FaPython, FaJava, FaHtml5, FaCss3, FaReact, FaNodeJs, FaGit, FaDocker, FaBootstrap } from "../data/dataIcons";
-import { SiTypescript, SiNestjs, SiMysql, SiPostgresql, SiMongodb, SiDjango } from "../data/dataIcons";
+import { FaPython, FaJava, FaHtml5, FaCss3, FaReact, FaNodeJs, FaGit, FaDocker, FaBootstrap, FaPhp } from "../data/dataIcons";
+import { SiTypescript, SiNestjs, SiMysql, SiPostgresql, SiMongodb, SiDjango, SiLaravel, SiNextdotjs, SiTailwindcss, SiExpress, SiAngular } from "../data/dataIcons";
 import { IoLogoJavascript } from "../data/dataIcons";
 
 export const dataSkills = [
@@ -8,15 +8,20 @@ export const dataSkills = [
   { icon: FaJava, color: "#F80000" },       // Java
   { icon: SiTypescript, color: "#3178C6" }, // TypeScript
   { icon: IoLogoJavascript, color: "#F7DF1E" }, // JavaScript
+  { icon: FaPhp, color: "#777BB4" },        // PHP
   
   // Desarrollo Web
   { icon: FaHtml5, color: "#E34F26" },      // HTML
   { icon: FaCss3, color: "#1572B6" },       // CSS
   { icon: FaReact, color: "#61DAFB" },      // React
+  { icon: SiNextdotjs, color: "#000000" },  // Next.js
+  { icon: SiAngular, color: "#DD0031" },    // Angular
+  { icon: SiTailwindcss, color: "#06B6D4" },// Tailwind CSS
   
   // Back-End
   { icon: FaNodeJs, color: "#5FA04E" },     // Node.js
   { icon: SiNestjs, color: "#E0234E" },     // Nest.js
+  { icon: SiExpress, color: "#000000" },    // Express
   
   // Bases de Datos
   { icon: SiMysql, color: "#4479A1" },      // MySQL
@@ -32,4 +37,5 @@ export const dataSkills = [
   // Diseño y Desarrollo Web Adicional
   { icon: FaBootstrap, color: "#7952B3" },  // Bootstrap
   { icon: SiDjango, color: "#092E20" },     // Django
+  { icon: SiLaravel, color: "#FF2D20" },    // Laravel
 ];
