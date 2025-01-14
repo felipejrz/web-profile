@@ -157,7 +157,7 @@ export const profileData = [
         color: "#d4c9c9",
       },
     ],
-    linkPages: "https://felipe-juarez-porfolio.netlify.app",
+    linkPages: "https://felipe-juarez-profile.netlify.app",
     linkHub: "https://github.com/felipejrz/web-profile",
   },
 ];
