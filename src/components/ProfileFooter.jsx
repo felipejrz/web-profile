@@ -8,7 +8,7 @@ const socials = [
   { icon: <GitHub />, path: "https://github.com/felipejrz" },
   {
     icon: <LinkedIn />,
-    path: "https://www.linkedin.com/in/felipe-daniel-juarez-alvarez-85216728b/",
+    path: "https://www.linkedin.com/in/felipe-daniel-ju%C3%A1rez-alvarez-85216728b/",
   },
 ];
 
