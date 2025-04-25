@@ -25,12 +25,20 @@ export const worksData = [
     texto:
       "Colaboré en un equipo SCRUM para desarrollar una plataforma de gestión de tutorías, creando interfaces interactivas con HTML, CSS, JavaScript, Django y Bootstrap. Contribuí a la mejora continua mediante sprints y retrospectivas, asegurando la calidad y puntualidad del proyecto. Utilicé GitHub, PostgreSQL, Docker y SCRUM.",
   },
+  // {
+  //   puesto: "Desarrollador Web",
+  //   empresa: "Freelance",
+  //   localizacion: "Ciudad de México",
+  //   fechas: "Actualmente...",
+  //   texto:
+  //     "Apasionado por el desarrollo web y la teconologia, trabajando como freelance, gestionando proyectos y entregando soluciones de alta calidad. En frontend y backend, creo interfaces intuitivas y sistemas robustos 💻, siempre enfocado en la innovación y resultados sobresalientes 🌟.",
+  // },
   {
-    puesto: "Desarrollador Web",
-    empresa: "Freelance",
+    puesto: "Desarrollador Full Stack",
+    empresa: "Secretaría de Gestión Integral del Agua - SEGIAGUA",
     localizacion: "Ciudad de México",
-    fechas: "Actualmente...",
+    fechas: "Julio 2024 - Presente",
     texto:
-      "Apasionado por el desarrollo web y la teconologia, trabajando como freelance, gestionando proyectos y entregando soluciones de alta calidad. En frontend y backend, creo interfaces intuitivas y sistemas robustos 💻, siempre enfocado en la innovación y resultados sobresalientes 🌟.",
+      "Encargado del desarrollo de sistemas internos para la gestión de datos hidrológicos y documentación institucional. Lideré la creación de una plataforma con Angular, NestJS y PostgreSQL para procesar y visualizar millones de registros relacionados con el sistema de agua Lerma-CDMX. También desarrollé un sistema documental con Laravel y Tailwind CSS, con funciones avanzadas de búsqueda, almacenamiento seguro y control de acceso. Además, colaboré en otros proyectos enfocados en visualización de datos, optimización de consultas SQL, integración de sistemas.",
   },
 ];
