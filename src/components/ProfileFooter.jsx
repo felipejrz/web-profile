@@ -3,8 +3,8 @@ import {Facebook, Instagram, GitHub, LinkedIn} from '../data/dataIcons'
 import { useTheme } from "@mui/material/styles";
 
 const socials = [
-  { icon: <Facebook />, path: "" },
-  { icon: <Instagram />, path: "" },
+  // { icon: <Facebook />, path: "" },
+  // { icon: <Instagram />, path: "" },
   { icon: <GitHub />, path: "https://github.com/felipejrz" },
   {
     icon: <LinkedIn />,
